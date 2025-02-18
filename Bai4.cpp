@@ -8,14 +8,14 @@ int main(){
         int n;
         cin >> n;
         cout << "Test" << " " << i << ":" << " ";
-        for(int i = 2; i <= sqrt(n); i++){
-            if(n % i == 0){
+        for(int j = 2; j <= sqrt(n); j++){
+            if(n % j == 0){
                 int dem = 0;
-                while(n % i == 0){
+                while(n % j == 0){
                     dem++;
-                    n /= i;
+                    n /= j;
                 }
-                cout << i << "(" << dem << ")" << " ";
+                cout << j << "(" << dem << ")" << " ";
             }
         }
         if(n > 1){
