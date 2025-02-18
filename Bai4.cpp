@@ -1,3 +1,5 @@
+//PHÂN TÍCH THỪA SỐ NGUYÊN TỐ
+
 #include <bits/stdc++.h>
 using namespace std;
 
