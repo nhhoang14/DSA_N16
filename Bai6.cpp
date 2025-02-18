@@ -6,8 +6,9 @@ using namespace std;
 int check(){
   string s;
   cin >> s;
-  for(int i = 0; i < s.length() - 3; i++){
+  for(int i = 0; i < s.length() - 2; i++){
     if(s[i] > s[i + 1] && s[i + 1] < s[i + 2])return 0;
+    else if (s[i] < s[i + 1] && s[i + 1] > s[i + 2])return 0;
   }
   return 1;
 }
@@ -22,4 +23,3 @@ int main(){
   }
   return 0;
 }
-
