@@ -1,23 +1,18 @@
-//VÒNG TRÒN
-
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-
-string loc(string s){
-    string res = "";
-    res.push_back(s[0]);
-    for(int i = 1; i < s.length(); i ++){
-        int pos = res.length();
-        if(s[i] != res[pos - 1]) res.push_back(s[i]);
-        else res.pop_back();
-    }
-    return res;
-}
 
 int main(){
     string s;
     cin >> s;
-    s = loc(s);
-    cout << s;
+    unordered_map<char, vector<int>> ve;
+    for(int i = 0; i < s.size(); ++i) ve[s[i]].push_back(i);
+    int dem = 0;
+    for(char c1 = 'A'; c1 <= 'Z'; ++c1){
+        for(char c2 = c1 + 1; c2 <= 'Z'; ++c2){
+            if (ve[c1][0] < ve[c2][0] && ve[c2][0] < ve[c1][1] && ve[c1][1] < ve[c2][1]) dem++;
+			if (ve[c2][0] < ve[c1][0] && ve[c1][0] < ve[c2][1] && ve[c2][1] < ve[c1][1]) dem++;
+        }
+    }
+    cout << dem;
     return 0;
 }
