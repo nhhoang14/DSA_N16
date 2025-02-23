@@ -8,7 +8,6 @@ void testcase(){
   cin >> n;
   int a[n];
   for(auto &x : a) cin >> x;
-  int gh = n / 2;
   for(int i = 0; i < n; i++){
     if(a[i] != a[n - 1 - i]){
       cout << "NO" << endl;
