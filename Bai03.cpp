@@ -3,16 +3,19 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int check(){
+void testcase(){
   int n;
   cin >> n;
   int a[n];
   for(auto &x : a) cin >> x;
   int gh = n / 2;
   for(int i = 0; i < n; i++){
-    if(a[i] != a[n - 1 - i]) return 0;
+    if(a[i] != a[n - 1 - i]){
+      cout << "NO" << endl;
+      return;
+    }
   }
-  return 1;
+  cout << "YES" << endl;
 }
 
 int main(){
@@ -20,9 +23,7 @@ int main(){
   cin >> t;
   cin.ignore();
   while(t--){
-    if(check()) cout << "YES" << endl;
-    else cout << "NO" << endl;
+    testcase();
   }
   return 0;
 }
-
