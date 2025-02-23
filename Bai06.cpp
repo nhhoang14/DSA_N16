@@ -6,11 +6,13 @@ using namespace std;
 int check(){
   string s;
   cin >> s;
+  bool tang = true;
+	bool giam = true;
   for(int i = 0; i < s.length() - 2; i++){
-    if(s[i] > s[i + 1] && s[i + 1] < s[i + 2])return 0;
-    else if (s[i] < s[i + 1] && s[i + 1] > s[i + 2])return 0;
+   if(s[i] > s[i - 1]) giam = false;
+		if(s[i] < s[i - 1]) tang = false;
   }
-  return 1;
+  return giam || tang;
 }
 
 int main(){
