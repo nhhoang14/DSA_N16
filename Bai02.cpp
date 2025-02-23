@@ -10,7 +10,7 @@ int main(){
   while(t--){
     string s;
     cin >> s;
-    if(s[0] == s[s.length() - 1]) cout << "YES" << endl;
+    if(s[0] == s[s.size() - 1]) cout << "YES" << endl;
     else cout << "NO" << endl;
   }
   return 0;
