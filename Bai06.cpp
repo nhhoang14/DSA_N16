@@ -7,10 +7,10 @@ int check(){
   string s;
   cin >> s;
   bool tang = true;
-	bool giam = true;
+  bool giam = true;
   for(int i = 0; i < s.length() - 2; i++){
-   if(s[i] > s[i - 1]) giam = false;
-		if(s[i] < s[i - 1]) tang = false;
+   	if(s[i] > s[i - 1]) giam = false;
+	if(s[i] < s[i - 1]) tang = false;
   }
   return giam || tang;
 }
