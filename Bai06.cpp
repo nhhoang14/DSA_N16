@@ -8,7 +8,7 @@ int check(){
   cin >> s;
   bool tang = true;
   bool giam = true;
-  for(int i = 0; i < s.length() - 2; i++){
+  for(int i = 1; i < s.length(); i++){
     if(s[i] > s[i - 1]) giam = false;
     if(s[i] < s[i - 1]) tang = false;
   }
