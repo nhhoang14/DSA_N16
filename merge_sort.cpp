@@ -35,13 +35,9 @@ void merge_sort(int a[], int l, int r){
 int main(){
 	int n = 100;
 	int a[100];
-	srand(time(NULL));
-	for(int i = 0; i < n; i++){
-		a[i] = rand() % 1000;
-	}
+	for(int i = 0; i < n; i++) cin >> a[i];
 	merge_sort(a, 0, n - 1);
-	for(int x : a){
+	for(int x : a)
 		cout << x << " ";
-	}
 	return 0;
 }
